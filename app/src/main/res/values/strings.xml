@@ -22,4 +22,5 @@
     <string name="answer4_2">1954</string>
     <string name="answer4_3">1960</string>
     <string name="send_button">Results</string>
+    <string name="test">0</string>
 </resources>
