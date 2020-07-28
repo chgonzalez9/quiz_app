@@ -18,9 +18,8 @@
     <string name="answer3_4">Belgium</string>
     <string name="answer3_5">Germany</string>
     <string name="question4">In what year was found the CERN?</string>
-    <string name="answer4_1">1958</string>
-    <string name="answer4_2">1954</string>
-    <string name="answer4_3">1960</string>
+    <string name="answer4">Year</string>
+    <string name="answerDigits">0123456789</string>
     <string name="send_button">Results</string>
     <string name="test">0</string>
 </resources>
