@@ -21,5 +21,8 @@
     <string name="answer4">Year</string>
     <string name="answerDigits">0123456789</string>
     <string name="send_button">Results</string>
+    <string name="reset_button">Try Again</string>
+    <string name="alertTittle">Results</string>
+    <string name="okText">OK</string>
     <string name="test">0</string>
 </resources>

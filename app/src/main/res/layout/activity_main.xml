@@ -159,13 +159,29 @@
             android:layout_height="wrap_content"
             android:text="@string/test" />
 
-        <Button
-            android:id="@+id/results_button"
-            style="@style/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send_button"
-            android:onClick="resultButton" />
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:layout_marginBottom="24dp">
+
+           <Button
+               style="@style/button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:text="@string/send_button"
+               android:onClick="resultButton" />
+
+           <Button
+               style="@style/button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:text="@string/reset_button"
+               android:onClick="resetButton" />
+
+       </RelativeLayout>
 
     </LinearLayout>
 
