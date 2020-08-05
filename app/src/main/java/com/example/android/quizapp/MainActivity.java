@@ -1,11 +1,13 @@
 package com.example.android.quizapp;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     boolean answered = false;
 
     float result = 0;
+
+    String Q5S = "1954";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (((CheckBox) findViewById(R.id.answer2_3)).isChecked()) {
-                result = result - 0.75f;
+                result = result - 0.5f;
             }
 
             if (((CheckBox) findViewById(R.id.answer2_4)).isChecked()) {
-                result = result - 0.75f;
+                result = result - 0.5f;
             }
 
             if (((CheckBox) findViewById(R.id.answer3_1)).isChecked()) {
@@ -76,17 +80,28 @@ public class MainActivity extends AppCompatActivity {
                 result = result + 0.25f;
             }
 
+            EditText questionFour = (EditText) findViewById(R.id.answer4);
+            String questionFourAnswer = questionFour.getText().toString();
 
+            if (questionFourAnswer.equalsIgnoreCase(Q5S)) {
+                result++;
+            }
 
             answered = true;
 
         }
-        displayTest(result);
+
+        Context context = getApplicationContext();
+        CharSequence text = totalMark(result, name);
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.show();
     }
 
     public void resetButton(View view) {
         answered = false;
-        displayTest(result = 0);
     }
 
 
@@ -106,8 +121,4 @@ public class MainActivity extends AppCompatActivity {
         return name;
     }
 
-    private void displayTest(float total) {
-        TextView totalMark = (TextView) findViewById(R.id.score);
-        totalMark.setText("" + total);
-    }
 }

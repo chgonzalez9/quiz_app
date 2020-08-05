@@ -4,6 +4,7 @@
     <style name="answers">
 
         <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textStyle">italic</item>
 
     </style>
 
