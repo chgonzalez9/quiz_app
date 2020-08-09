@@ -43,6 +43,8 @@
                 style="@style/answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="radioButtonAnswer"
                 android:text="@string/answer1_1" />
 
             <RadioButton
@@ -50,6 +52,8 @@
                 style="@style/answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="radioButtonAnswer"
                 android:text="@string/answer1_2" />
 
             <RadioButton
@@ -57,6 +61,8 @@
                 style="@style/answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="radioButtonAnswer"
                 android:text="@string/answer1_3" />
 
         </RadioGroup>
@@ -72,6 +78,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer2_1" />
 
         <CheckBox
@@ -79,6 +87,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer2_2" />
 
         <CheckBox
@@ -86,6 +96,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer2_3" />
 
         <CheckBox
@@ -93,6 +105,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer2_4" />
 
         <TextView
@@ -106,6 +120,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer3_1" />
 
         <CheckBox
@@ -113,6 +129,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer3_2" />
 
         <CheckBox
@@ -120,6 +138,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer3_3" />
 
         <CheckBox
@@ -127,6 +147,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer3_4" />
 
         <CheckBox
@@ -134,6 +156,8 @@
             style="@style/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkBoxAnswer"
             android:text="@string/answer3_5" />
 
         <TextView
