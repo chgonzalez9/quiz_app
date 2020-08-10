@@ -110,69 +110,40 @@ public class MainActivity extends AppCompatActivity {
 
             if (answer1_1.isChecked()) {
                 result++;
-                answerResult += "\nAnswer 1-A";
+                answerResult += "\nAnswer 1-A is Correct";
             }
 
             if (answer1_2.isChecked()) {
                 result--;
-                answerResult += "\nAnswer 1-B";
+                answerResult += "\nAnswer 1-B is Incorrect";
             }
 
             if (answer1_3.isChecked()) {
                 result--;
-                answerResult += "\nAnswer 1-C";
+                answerResult += "\nAnswer 1-C is Incorrect";
             }
 
-            if (answer2_1.isChecked()) {
-                result = result + 0.5f;
-                answerResult += "\nThermodynamics";
+            if (answer2_1.isChecked() && answer2_2.isChecked() && !answer2_3.isChecked() && !answer2_4.isChecked()) {
+                result++;
+                answerResult += "\nAnswer 2 is Correct";
+            } else {
+                answerResult += "\nAnswer 2 is Incorrect";
             }
 
-            if (answer2_2.isChecked()) {
-                result = result + 0.5f;
-                answerResult += "\nQuantum mechanics";
-            }
-
-            if (answer2_3.isChecked()) {
-                result = result - 0.5f;
-                answerResult += "\nScientology";
-            }
-
-            if (answer2_4.isChecked()) {
-                result = result - 0.5f;
-                answerResult += "\nAstronomy";
-            }
-
-            if (answer3_1.isChecked()) {
-                result = result - 0.5f;
-                answerResult += "\nChina";
-            }
-
-            if (answer3_2.isChecked()) {
-                result = result + 0.25f;
-                answerResult += "\nSpain";
-            }
-
-            if (answer3_3.isChecked()) {
-                result = result + 0.25f;
-                answerResult += "\nItaly";
-            }
-
-            if (answer3_4.isChecked()) {
-                result = result + 0.25f;
-                answerResult += "\nBelgium";
-            }
-
-            if (answer3_5.isChecked()) {
-                result = result + 0.25f;
-                answerResult += "\nGermany";
+            if (!answer3_1.isChecked() && answer3_2.isChecked() && answer3_3.isChecked() && answer3_4.isChecked() && answer3_5.isChecked()) {
+                result++;
+                answerResult += "\nAnswer 3 is Correct";
+            } else {
+                answerResult += "\nAnswer 3 is Incorrect";
             }
 
             EditText questionFour = findViewById(R.id.answer4);
             String questionFourAnswer = questionFour.getText().toString();
             if (questionFourAnswer.equalsIgnoreCase(Q4S)) {
                 result++;
-                answerResult += "\n" + questionFourAnswer;
+                answerResult += "\nAnswer 4 is Correct";
+            } else {
+                answerResult += "\nAnswer 4 is Incorrect";
             }
 
             answered = true;
@@ -190,20 +161,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void resetButton(View view) {
         answered = false;
+        result = 0;
     }
 
     private String totalMark(float mark, String answer) {
 
         if (mark <= 2) {
-            return answer + "\nYou fail the test.\nTry Again!";
+            return answer + "\nTotal mark = " + mark + "\nYou fail the test.\nTry Again!";
         }
 
         if (mark < 4) {
-            return answer + "\nCongratulations!\nYou pass!";
+            return answer + "\nTotal mark = " + mark + "\nCongratulations!\nYou pass!";
         }
 
         if (mark == 4) {
-            return answer + "\nYou´re amazing!\nYou pass with a 10!";
+            return answer + "\nTotal mark = " + mark + "\nYou´re amazing!\nYou pass with a 10!";
         }
         return answer;
     }
